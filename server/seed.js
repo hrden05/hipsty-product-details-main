@@ -60,6 +60,6 @@ for (let i = 0; i < 100; i += 1) {
 
 // add all generated data to the 'Store' database
 db.Store.insertMany(stores)
-  .then(() => {console.log(`${stores.length} seeds planted into Store database`)})
+  .then(() => console.log(`${stores.length} seeds planted into Store database`))
   .catch((err) => console.error(`Error seeding data to Store database: ${err.message}`))
   .finally(() => process.exit());
