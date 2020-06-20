@@ -1,10 +1,12 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost:27017');
-const db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:'));
+// Server Discover and Monitoring engine
+mongoose.connect('mongodb://localhost/hipsy', { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log('connected to database'))
+  .catch((err) => console.error('error connecting to database', err));
 
 const storeSchema = new mongoose.Schema({
+  _id: mongoose.Schema.Types.ObjectId,
   store_name: String,
   store_owner: String,
   store_owner_avatar: String,
@@ -19,6 +21,7 @@ const storeSchema = new mongoose.Schema({
   ],
   store_products: [
     {
+      _id: mongoose.Schema.Types.ObjectId,
       product_name: String,
       product_quantity: Number,
       product_material: String,
@@ -34,6 +37,8 @@ const storeSchema = new mongoose.Schema({
 
 // compiling schema into a model
 const Store = mongoose.model('Store', storeSchema);
+
+module.exports = { Store };
 
 /* ********** GATHERING OF DATA *******
 // * "Meet your seller" data at the bottom
