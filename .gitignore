@@ -1,0 +1,4 @@
+# don't upload the node modules to gi
+node_modules
+.vscode
+.eslintrc.js
