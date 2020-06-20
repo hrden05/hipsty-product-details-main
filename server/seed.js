@@ -5,8 +5,8 @@ const db = require('../database/index.js');
 
 // delete the database so as to not overload it
 db.Store.deleteMany()
-  .then(() => console.log(`Store database cleared`))
-  .catch((err) => console.error(`Unable to clear database`));
+  .then(() => console.log('Store database cleared'))
+  .catch((err) => console.error(`Unable to clear database, error: ${err.message}`));
 
 // seed data for 100 stores
 const stores = [];
