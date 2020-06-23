@@ -38,4 +38,5 @@ npm install
 ```
 
 Current photo progress:
-![Image of client side](https://github.com/hrden05/hipsty-product-details-main/tree/master/public/sample.png)
+
+![Image of client side](https://github.com/hrden05/hipsty-product-details-main/tree/master/public/sample.png?raw=true)
