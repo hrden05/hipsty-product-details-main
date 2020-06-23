@@ -1,0 +1,119 @@
+body {
+  font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+  font-size: 13px;
+  width: 320px;
+  margin-left: 20px;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.greyText, a:link, a:visited {
+  color: #595959;
+}
+
+.SVGIcon {
+  float: left;
+  width: 50px;
+}
+
+.SVGIconsAndText {
+  text-align: center;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+.SVGBlue {
+  fill: #4D6BC6;
+}
+
+.SVGLightBlue {
+  fill: #D7E6F5;
+}
+
+.hourglass {
+  fill: #E6E1F0;
+}
+
+.hourglassOutline {
+  fill: black;
+}
+
+.hourglassFill {
+  fill: purple;
+}
+
+.descriptionField {
+  margin-top: 30px;
+}
+
+button {
+ background: white;
+ border-radius: 16px;
+ border: 1px solid black;
+ cursor: pointer;
+ display: inline-block;
+ padding: 8px 20px;
+}
+
+button:hover {
+  box-shadow: 0 4px 20px rgba(34, 34, 34, 0.15);
+  /* transition: transform 200ms cubic-bezier(0.345, 0.115, 0.135, 1.42),opacity 150ms ease-out; */
+}
+
+.shippingInfo {
+  column-count: 2;
+  font-size: smaller;
+}
+
+.shippingInfoValues {
+  font-size: large;
+}
+
+.sellerData {
+  margin-top: 15px;
+}
+
+.storeOwner {
+  margin-bottom: 12px;
+  align-self: center;
+}
+
+.storeOwnerAvatar {
+  border-radius: '50%';
+  float: left;
+  margin-right: 20px;
+  width: 50px;
+}
+
+.storeOwnerInfo {
+  padding-left: 50px;
+  align-self: center;
+}
+
+
+.selectorStyling:hover {
+  background: lightgrey;
+  border-radius: 16px;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0px 8px;
+  margin-left: -8px;
+}
+
+.selectorStyling:active {
+  background: grey;
+  border-radius: 16px;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0px 8px;
+  margin-left: -8px;
+}
+
+.responseTime {
+  padding-top: 20px;
+}
+
+a:hover {
+  opacity: 70%;
+}
