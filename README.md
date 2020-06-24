@@ -37,3 +37,6 @@ npm install -g webpack
 npm install
 ```
 
+## Current photo progress:
+
+![Image of client side](public/sample.png)
