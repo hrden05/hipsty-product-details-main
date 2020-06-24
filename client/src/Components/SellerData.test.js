@@ -70,10 +70,10 @@ describe('Seller Data', () => {
     __v: 0,
   };
 
-  it('Seller Data renders, with props passed in', () => {
-    const wrapper = shallow(<SellerData store={store}/>);
-    expect(wrapper).toMatchSnapshot();
-  });
+  // it('Seller Data renders, with props passed in', () => {
+  //   const wrapper = shallow(<SellerData store={store}/>);
+  //   expect(wrapper).toMatchSnapshot();
+  // });
 
   it('Seller Message button click should be responsive', () => {
     const wrapper = mount(<SellerData store={store}/>);
