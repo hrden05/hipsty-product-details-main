@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Seller Data Seller Data renders, with props passed in 1`] = `ShallowWrapper {}`;
+
+exports[`Seller Data Seller Data should map and render two FAQs 1`] = `ShallowWrapper {}`;

@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App App renders, with props passed in 1`] = `ShallowWrapper {}`;
+
+exports[`App App renders, without any data 1`] = `ShallowWrapper {}`;
+
+exports[`App App renders, without any props passing in 1`] = `ShallowWrapper {}`;
+
+exports[`App App should update store state 1`] = `undefined`;

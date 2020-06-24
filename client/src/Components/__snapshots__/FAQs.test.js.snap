@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Store FAQs A Single FAQ renders, with one FAQ passed in 1`] = `ShallowWrapper {}`;
+
+exports[`Store FAQs Product description renders, with props passed in 1`] = `ShallowWrapper {}`;

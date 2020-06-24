@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Information before the description (pre-description) Pre-description has a handmade icon 1`] = `ShallowWrapper {}`;
+
+exports[`Information before the description (pre-description) Pre-description renders, with initial Loading 1`] = `ShallowWrapper {}`;
+
+exports[`Information before the description (pre-description) Pre-description renders, with props passed in 1`] = `ShallowWrapper {}`;
