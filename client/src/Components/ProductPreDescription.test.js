@@ -72,9 +72,9 @@ describe('Information before the description (pre-description)', () => {
 
   const wrapper = shallow(<ProductPreDescription store={store}/>);
 
-  // it('Pre-description renders, with props passed in', () => {
-  //   expect(wrapper).toMatchSnapshot();
-  // });
+  it('Pre-description renders, with props passed in', () => {
+    expect(wrapper).toMatchSnapshot();
+  });
 
   it('Pre-description has a handmade icon', () => {
     expect(wrapper.find('.greyText')).toBeTruthy();

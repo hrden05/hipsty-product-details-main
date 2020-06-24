@@ -72,9 +72,9 @@ describe('Seller Data', () => {
 
   const wrapper = shallow(<SellerData store={store}/>);
 
-  // it('Seller Data renders, with props passed in', () => {
-  //   expect(wrapper).toMatchSnapshot();
-  // });
+  it('Seller Data renders, with props passed in', () => {
+    expect(wrapper).toMatchSnapshot();
+  });
 
   it('Seller Message button click should be responsive', () => {
     const wrapper = mount(<SellerData store={store}/>);

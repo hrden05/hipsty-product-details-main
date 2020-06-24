@@ -70,10 +70,10 @@ describe('Store FAQs', () => {
     __v: 0,
   };
 
-  // it('A Single FAQ renders, with one FAQ passed in', () => {
-  //   const wrapper = shallow(<FAQs FAQ={store.store_FAQs[0]}/>);
-  //   expect(wrapper).toMatchSnapshot();
-  // });
+  it('A Single FAQ renders, with one FAQ passed in', () => {
+    const wrapper = shallow(<FAQs FAQ={store.store_FAQs[0]}/>);
+    expect(wrapper).toMatchSnapshot();
+  });
 
   it('FAQ state should be an object of a FAQ question and answer', () => {
     const wrapper = shallow(<FAQs FAQ={store.store_FAQs[0]}/>);

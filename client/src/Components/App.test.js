@@ -70,16 +70,16 @@ describe('App', () => {
     __v: 0,
   };
 
-  // it('App renders, without any props passing in', () => {
-  //   const wrapper = shallow(<App />);
-  //   expect(wrapper).toMatchSnapshot();
-  // });
+  it('App renders, without any props passing in', () => {
+    const wrapper = shallow(<App />);
+    expect(wrapper).toMatchSnapshot();
+  });
 
   const wrapper = shallow(<App store={store}/>);
 
-  // it('App renders, with props passed in', () => {
-  //   expect(wrapper).toMatchSnapshot();
-  // });
+  it('App renders, with props passed in', () => {
+    expect(wrapper).toMatchSnapshot();
+  });
 
   it('App renders, with initial Loading', () => {
     expect(wrapper.find('h1').text()).toEqual('Loading...');

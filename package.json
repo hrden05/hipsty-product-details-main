@@ -59,6 +59,14 @@
   "jest": {
     "setupFilesAfterEnv": [
       "./jest.setup.js"
+    ],
+    "reporters": [
+      [
+        "jest-nyancat-reporter",
+        {
+          "suppressErrorReporter": false
+        }
+      ]
     ]
   }
 }
