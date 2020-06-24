@@ -70,9 +70,9 @@ describe('Product Main Description', () => {
     __v: 0,
   };
 
-  // it('Product description renders, with props passed in', () => {
-  //   const wrapper = shallow(<ProductDescription store={store}/>);
-  //   expect(wrapper).toMatchSnapshot();
-  // });
+  it('Product description renders, with props passed in', () => {
+    const wrapper = shallow(<ProductDescription store={store}/>);
+    expect(wrapper).toMatchSnapshot();
+  });
 
 });
