@@ -1,4 +1,5 @@
 import React from 'react';
+import FAQs from './FAQs.jsx';
 
 class SellerData extends React.Component {
   constructor(props) {
@@ -12,7 +13,6 @@ class SellerData extends React.Component {
   }
 
   onFAQClick() {
-    console.log('clicked');
     this.setState({
       hideFAQs: !this.state.hideFAQs,
     });
@@ -21,7 +21,19 @@ class SellerData extends React.Component {
   render() {
     return (
       <div className='sellerData'>
-        <div className='selectorStyling' onClick={this.onFAQClick}>FAQs</div>
+        <div>
+          <div className='selectorStyling' onClick={this.onFAQClick}><b>FAQs</b></div>
+        {this.state.hideFAQs
+          ?
+          <p></p>
+          :
+          <div>
+            {this.props.store.store_FAQs.map((FAQ) => {
+            return (<div key={FAQ._id}><FAQs FAQ={FAQ} /></div>);
+            })}
+          </div>
+        }
+        </div>
         <p className='greyText'>Meet your seller</p>
         <div className='storeOwner'>
           <img className='storeOwnerAvatar' src={this.props.store.store_owner_avatar} alt='' style={{ borderRadius: '100%' }} />

@@ -1,14 +1,13 @@
 const faker = require('faker');
 const { Faker } = require('fakergem');
-const mongoose = require('mongoose');
 const db = require('../database/index.js');
 
-// delete the database so as to not overload it
+// delete the previous data from database so as to not overload it
 db.Store.deleteMany()
   .then((data) => console.log(`Store database cleared - Deleted ${data.deletedCount} entries.`))
   .catch((err) => console.error(`Unable to clear database, error: ${err.message}.`));
 
-// seed data for 100 stores
+/* ************ seed data for 100 stores ************ */
 const stores = [];
 for (let i = 0; i < 100; i += 1) {
   // make some store FAQs
@@ -19,6 +18,7 @@ for (let i = 0; i < 100; i += 1) {
       store_FAQ_question: Faker.RickAndMorty.quote().split('.')[0].concat('?'),
       store_FAQ_answer: Faker.TwinPeaks.quote(),
     };
+    // all each generated FAQs to array (for db)
     storeFAQs.push(newFAQ);
   }
 
@@ -39,6 +39,7 @@ for (let i = 0; i < 100; i += 1) {
       product_return_policy: faker.random.number({ min: 0, max: 21 }),
       product_other_shoppers: faker.random.number({ min: 0, max: 50 }),
     };
+    // all each generated proudct to array (for db)
     storeProducts.push(newProduct);
   }
 
@@ -53,7 +54,6 @@ for (let i = 0; i < 100; i += 1) {
     store_FAQs: storeFAQs,
     store_products: storeProducts,
   };
-
   // add each store data created to array (for db)
   stores.push(storeAll);
 }

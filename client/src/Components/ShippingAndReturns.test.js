@@ -1,8 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import App from './App';
+import ShippingAndReturns from './ShippingAndReturns';
 
-describe('App', () => {
+describe('Shipping and Returns', () => {
   const store = {
     _id: '5ef246817883348c575f7cb3',
     store_name: 'Fahey - Gibson',
@@ -70,24 +70,8 @@ describe('App', () => {
     __v: 0,
   };
 
-  it('App renders, without any props passing in', () => {
-    const wrapper = shallow(<App />);
-    expect(wrapper).toMatchSnapshot();
+  it('Shipping Data Renders', () => {
+    const wrapper = shallow(<ShippingAndReturns store={store}/>);
+    expect(wrapper.contains('Svalbard & Jan Mayen Islands')).toBe(true);
   });
-
-  it('App renders, with initial Loading', () => {
-    const wrapper = shallow(<App store={store}/>);
-    expect(wrapper.find('h1').text()).toEqual('Loading...');
-  });
-
-  it('App has a truthy state for loading', () => {
-    const wrapper = shallow(<App store={store}/>);
-    expect(wrapper.state().loading).toBeTruthy();
-  });
-
-  it('App store state should update when component mounts', () => {
-    const wrapper = shallow(<App store={store}/>);
-    expect(wrapper.state('store')).toBeArray();
-  });
-
 });

@@ -1,8 +1,8 @@
 import React from 'react';
-import { shallow } from 'enzyme';
-import App from './App';
+import { shallow, mount } from 'enzyme';
+import FAQs from './FAQs';
 
-describe('App', () => {
+describe('Store FAQs', () => {
   const store = {
     _id: '5ef246817883348c575f7cb3',
     store_name: 'Fahey - Gibson',
@@ -70,24 +70,25 @@ describe('App', () => {
     __v: 0,
   };
 
-  it('App renders, without any props passing in', () => {
-    const wrapper = shallow(<App />);
+  it('A Single FAQ renders, with one FAQ passed in', () => {
+    const wrapper = shallow(<FAQs FAQ={store.store_FAQs[0]}/>);
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('App renders, with initial Loading', () => {
-    const wrapper = shallow(<App store={store}/>);
-    expect(wrapper.find('h1').text()).toEqual('Loading...');
+  it('FAQ state should be an object of a FAQ question and answer', () => {
+    const wrapper = shallow(<FAQs FAQ={store.store_FAQs[0]}/>);
+    expect(wrapper.state().FAQ).toBeTruthy();
   });
 
-  it('App has a truthy state for loading', () => {
-    const wrapper = shallow(<App store={store}/>);
-    expect(wrapper.state().loading).toBeTruthy();
+  it('hideFAQ state should be truthy (for showing when clicked)', () => {
+    const wrapper = shallow(<FAQs FAQ={store.store_FAQs[0]}/>);
+    expect(wrapper.state().hideFAQ).toBeTruthy();
   });
 
-  it('App store state should update when component mounts', () => {
-    const wrapper = shallow(<App store={store}/>);
-    expect(wrapper.state('store')).toBeArray();
+  it('FAQ question click should be responsive', () => {
+    const wrapper = mount(<FAQs FAQ={store.store_FAQs[0]}/>);
+    const FAQclick = wrapper.find('b');
+    FAQclick.simulate('click');
+    expect(wrapper.find('.selectorStyling')).toHaveLength(1);
   });
-
 });

@@ -10,7 +10,7 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      store: [],
+      store: this.props.store || [],
       loading: true,
     };
   }
@@ -26,17 +26,16 @@ class App extends React.Component {
   }
 
   render() {
-    console.log(this.state.store);
     return (
       <div>
         {this.state.loading
           ? <h1>Loading...</h1>
           : (
             <div>
-              <ProductPreDescription store={this.state.store} />
-              <ProductDescription store={this.state.store} />
-              <ShippingAndReturns store={this.state.store} />
-              <SellerData store={this.state.store} />
+              <div><ProductPreDescription store={this.state.store} /></div>
+              <div><ProductDescription store={this.state.store} /></div>
+              <div><ShippingAndReturns store={this.state.store} /></div>
+              <div><SellerData store={this.state.store} /></div>
             </div>
           )}
       </div>

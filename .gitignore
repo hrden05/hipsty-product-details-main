@@ -3,3 +3,8 @@ node_modules
 .vscode
 .eslintrc.js
 Stuff.txt
+
+
+# jest data
+coverage
+__snapshots__
