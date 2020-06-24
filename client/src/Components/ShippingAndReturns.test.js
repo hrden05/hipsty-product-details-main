@@ -1,8 +1,8 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
-import App from './App';
+import { shallow } from 'enzyme';
+import ShippingAndReturns from './ShippingAndReturns';
 
-describe('App', () => {
+describe('Shipping and Returns', () => {
   const store = {
     _id: '5ef246817883348c575f7cb3',
     store_name: 'Fahey - Gibson',
@@ -70,31 +70,9 @@ describe('App', () => {
     __v: 0,
   };
 
-  it('App renders, without any props passing in', () => {
-    const wrapper = shallow(<App />);
-    expect(wrapper).toMatchSnapshot();
-  });
-
-  const wrapper = shallow(<App store={store}/>);
-
-  it('App renders, with props passed in', () => {
-    expect(wrapper).toMatchSnapshot();
-  });
-
-  it('App renders, with initial Loading', () => {
-    expect(wrapper.find('h1').text()).toEqual('Loading...');
-  });
-
-  it('App has a truthy state for loading', () => {
-    expect(wrapper.state().loading).toBeTruthy();
-  });
-
-  it('App store state should not be an empty array', () => {
-    expect(wrapper.state().store).not.toEqual('[]');
-  });
-
-  it('App store state updates when setState is called', () => {
-    expect(wrapper.state().store).toEqual(store);
+  it('Shipping Data Renders', () => {
+    const wrapper = shallow(<ShippingAndReturns store={store}/>);
+    expect(wrapper.contains('Svalbard & Jan Mayen Islands')).toBe(true);
   });
 
 });
