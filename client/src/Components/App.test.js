@@ -77,9 +77,9 @@ describe('App', () => {
 
   const wrapper = shallow(<App store={store}/>);
 
-  it('App renders, with props passed in', () => {
-    expect(wrapper).toMatchSnapshot();
-  });
+  // it('App renders, with props passed in', () => {
+  //   expect(wrapper).toMatchSnapshot();
+  // });
 
   it('App renders, with initial Loading', () => {
     expect(wrapper.find('h1').text()).toEqual('Loading...');
