@@ -81,11 +81,13 @@ describe('Seller Data', () => {
     const messageButtonClick = wrapper.find('button');
     messageButtonClick.simulate('click');
     expect(wrapper.find('.messageButton')).toHaveLength(1);
+    wrapper.unmount();
   });
 
   it('Seller Data <FAQ /> should map and render two FAQs', () => {
     const wrapper = mount(<SellerData store={store}/>);
     expect(wrapper.find('.FAQs')).toEqual({});
+    wrapper.unmount();
   });
 
 });

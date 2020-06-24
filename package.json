@@ -10,7 +10,7 @@
     "start-dev": "nodemon server/server.js",
     "build-dev": "webpack -d --watch",
     "seed": "node server/seed.js",
-    "test": "jest",
+    "test": "jest --verbose || true",
     "test-watch": "jest --coverage --watch"
   },
   "dependencies": {

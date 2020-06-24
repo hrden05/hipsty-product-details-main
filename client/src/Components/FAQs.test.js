@@ -90,5 +90,6 @@ describe('Store FAQs', () => {
     const FAQclick = wrapper.find('b');
     FAQclick.simulate('click');
     expect(wrapper.find('.selectorStyling')).toHaveLength(1);
+    wrapper.unmount();
   });
 });
