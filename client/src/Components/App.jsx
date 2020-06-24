@@ -22,7 +22,8 @@ class App extends React.Component {
           store: res.data.stores[Math.floor(Math.random() * res.data.stores.length)],
           loading: false,
         });
-      });
+      })
+      .catch((err) => err.message);
   }
 
   render() {

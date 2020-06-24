@@ -74,4 +74,5 @@ describe('Shipping and Returns', () => {
     const wrapper = shallow(<ShippingAndReturns store={store}/>);
     expect(wrapper.contains('Svalbard & Jan Mayen Islands')).toBe(true);
   });
+
 });

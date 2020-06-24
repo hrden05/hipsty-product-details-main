@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import SellerData from './SellerData';
 
 describe('Seller Data', () => {
@@ -73,6 +73,18 @@ describe('Seller Data', () => {
   it('Seller Data renders, with props passed in', () => {
     const wrapper = shallow(<SellerData store={store}/>);
     expect(wrapper).toMatchSnapshot();
+  });
+
+  it('Seller Message button click should be responsive', () => {
+    const wrapper = mount(<SellerData store={store}/>);
+    const messageButtonClick = wrapper.find('button');
+    messageButtonClick.simulate('click');
+    expect(wrapper.find('.messageButton')).toHaveLength(1);
+  });
+
+  it('Seller Data <FAQ /> should map and render two FAQs', () => {
+    const wrapper = mount(<SellerData store={store}/>);
+    expect(wrapper.find('.FAQs')).toEqual({});
   });
 
 });

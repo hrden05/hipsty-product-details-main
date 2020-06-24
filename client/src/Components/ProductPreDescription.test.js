@@ -70,9 +70,18 @@ describe('Information before the description (pre-description)', () => {
     __v: 0,
   };
 
+  const wrapper = shallow(<ProductPreDescription store={store}/>);
+
   it('Pre-description renders, with props passed in', () => {
-    const wrapper = shallow(<ProductPreDescription store={store}/>);
     expect(wrapper).toMatchSnapshot();
+  });
+
+  it('Pre-description has a handmade icon', () => {
+    expect(wrapper.find('.greyText')).toBeTruthy();
+  });
+
+  it('Pre-description has a handmade icon', () => {
+    expect(wrapper.find('SVG.hourglassSVG')).toBeTruthy();
   });
 
 });

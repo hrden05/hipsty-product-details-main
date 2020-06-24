@@ -22,12 +22,12 @@ class SellerData extends React.Component {
     return (
       <div className='sellerData'>
         <div>
-          <div className='selectorStyling' onClick={this.onFAQClick}><b>FAQs</b></div>
+          <span className='selectorStyling' onClick={this.onFAQClick}><b>FAQs</b></span>
         {this.state.hideFAQs
           ?
           <p></p>
           :
-          <div>
+          <div className='FAQs'>
             {this.props.store.store_FAQs.map((FAQ) => {
             return (<div key={FAQ._id}><FAQs FAQ={FAQ} /></div>);
             })}
@@ -44,7 +44,7 @@ class SellerData extends React.Component {
         </div>
         <div className='responseTime'>
           <p>
-            <button type='button'>
+            <button type='button' className='messageButton'>
               Message {this.props.store.store_owner}
             </button>
           </p>

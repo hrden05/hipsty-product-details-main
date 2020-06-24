@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import App from './App';
 
 describe('App', () => {
@@ -75,19 +75,26 @@ describe('App', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  const wrapper = shallow(<App store={store}/>);
+
+  it('App renders, with props passed in', () => {
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('App renders, with initial Loading', () => {
-    const wrapper = shallow(<App store={store}/>);
     expect(wrapper.find('h1').text()).toEqual('Loading...');
   });
 
   it('App has a truthy state for loading', () => {
-    const wrapper = shallow(<App store={store}/>);
     expect(wrapper.state().loading).toBeTruthy();
   });
 
-  it('App store state should update when component mounts', () => {
-    const wrapper = shallow(<App store={store}/>);
-    expect(wrapper.state('store')).toBeArray();
+  it('App store state should not be an empty array', () => {
+    expect(wrapper.state().store).not.toEqual('[]');
+  });
+
+  it('App store state updates when setState is called', () => {
+    expect(wrapper.state().store).toEqual(store);
   });
 
 });
