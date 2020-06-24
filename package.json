@@ -10,7 +10,8 @@
     "start-dev": "nodemon server/server.js",
     "build-dev": "webpack -d --watch",
     "seed": "node server/seed.js",
-    "test": "jest --coverage --watch"
+    "test": "jest",
+    "test-watch": "jest --coverage --watch"
   },
   "dependencies": {
     "@babel/cli": "^7.10.3",
