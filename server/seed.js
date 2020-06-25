@@ -16,7 +16,7 @@ for (let i = 0; i < 100; i += 1) {
   for (let j = 0; j < numberOfFAQs; j += 1) {
     const newFAQ = {
       store_FAQ_question: Faker.RickAndMorty.quote().split('.')[0].concat('?'),
-      store_FAQ_answer: Faker.TwinPeaks.quote(),
+      store_FAQ_answer: Faker.Matz.quote(),
     };
     // all each generated FAQs to array (for db)
     storeFAQs.push(newFAQ);
@@ -33,7 +33,7 @@ for (let i = 0; i < 100; i += 1) {
       product_handmade: faker.random.boolean(),
       product_description: Faker.Hipster.paragraph(5),
       product_free_shipping_amount: faker.random.number({ min: 5, max: 20 }) * 5,
-      product_delivery_cost: faker.commerce.price({ min: 10, max: 30, symbol: '$' }),
+      product_delivery_cost: Faker.Commerce.price({ min: 1000, max: 3000}), //this is in cents
       product_free_shipping: faker.random.boolean(),
       product_deliver_time: faker.random.number({ min: 2, max: 10 }),
       product_return_policy: faker.random.number({ min: 0, max: 21 }),

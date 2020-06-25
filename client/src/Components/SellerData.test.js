@@ -70,7 +70,7 @@ describe('Seller Data', () => {
     __v: 0,
   };
 
-  const wrapper = shallow(<SellerData store={store}/>);
+  const wrapper = shallow(<SellerData store={store} />);
 
   it('Seller Data renders, with props passed in', () => {
     expect(wrapper).toMatchSnapshot();

@@ -1,5 +1,6 @@
 import React from 'react';
 import FAQs from './FAQs.jsx';
+import * as SVG from './svgFiles.jsx';
 
 class SellerData extends React.Component {
   constructor(props) {
@@ -16,29 +17,43 @@ class SellerData extends React.Component {
     this.setState({
       hideFAQs: !this.state.hideFAQs,
     });
+
   }
 
   render() {
     return (
       <div className='sellerData'>
         <div>
-          <span className='selectorStyling' onClick={this.onFAQClick}><b>FAQs</b></span>
-        {this.state.hideFAQs
+          {this.props.store.store_FAQs.length > 0
           ?
-          <p></p>
+            <div className='selectorStyling' onClick={this.onFAQClick}>
+              <span><b>FAQs </b></span>
+              {this.state.hideFAQs
+                ?
+                  <span>{SVG.FAQsArrow}</span>
+                :
+                  <span>{SVG.FAQsArrowRotate}</span>
+              }
+            </div>
           :
-          <div className='FAQs'>
-            {this.props.store.store_FAQs.map((FAQ) => {
-            return (<div key={FAQ._id}><FAQs FAQ={FAQ} /></div>);
-            })}
-          </div>
-        }
+            <span></span>
+          }
+          {this.state.hideFAQs
+          ?
+            <span></span>
+          :
+            <div className='FAQs'>
+              {this.props.store.store_FAQs.map((FAQ) => {
+              return (<div key={FAQ._id}><FAQs FAQ={FAQ} /></div>);
+              })}
+            </div>
+          }
         </div>
         <p className='greyText'>Meet your seller</p>
         <div className='storeOwner'>
           <img className='storeOwnerAvatar' src={this.props.store.store_owner_avatar} alt='' style={{ borderRadius: '100%' }} />
           <div className='storeOwnerInfo'>
-            {this.props.store.store_owner}
+            <div className='storeOwnerName'>{this.props.store.store_owner}</div>
             <div className='greyText'>Owner of <a href='/' className='storeOwnerLink'>{this.props.store.store_name}</a></div>
           </div>
         </div>
