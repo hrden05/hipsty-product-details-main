@@ -28,8 +28,8 @@ class FAQs extends React.Component {
   render() {
     return (
       <div>
-        <div className='selectorStyling' onClick={this.onFAQClick}>
-          <span><b>{this.state.FAQ.store_FAQ_question}</b></span>
+        <div className='FAQQuestionButton FAQButton' onClick={this.onFAQClick}>
+          <span className='FAQQuestion'><b>{this.state.FAQ.store_FAQ_question}</b></span>
           {this.state.hideFAQ
             ?
               <span>{SVG.FAQsArrow}</span>
@@ -41,7 +41,7 @@ class FAQs extends React.Component {
           ?
           <div></div>
           :
-          <div className='selectorStyling'>{this.state.FAQ.store_FAQ_answer}</div>
+          <p className='FAQAnswer'>{this.state.FAQ.store_FAQ_answer}</p>
         }
       </div>
     );

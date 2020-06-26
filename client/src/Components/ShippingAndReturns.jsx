@@ -18,15 +18,15 @@ const ShippingAndReturns = (props) => {
         <span>From</span>
         <p className='shippingInfoValues'>{props.store.store_country}</p>
       </div>
-      {freeShipping
-      ?
-        <div></div>
-      :
-        <div className='shippingInfoItem'>
-          <span>Cost to ship</span>
+      <div className='shippingInfoItem'>
+        <span>Cost to ship</span>
+        {freeShipping
+        ?
+          <p className='shippingInfoValues'>Free</p>
+        :
           <p className='shippingInfoValues'>${shippingCost}</p>
-        </div>
-      }
+        }
+      </div>
     </div>
   );
 };

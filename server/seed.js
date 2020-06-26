@@ -15,7 +15,7 @@ for (let i = 0; i < 100; i += 1) {
   const numberOfFAQs = Math.floor(Math.random() * 5);
   for (let j = 0; j < numberOfFAQs; j += 1) {
     const newFAQ = {
-      store_FAQ_question: Faker.RickAndMorty.quote().split('.')[0].concat('?'),
+      store_FAQ_question: Faker.Hipster.words(3).join(' ').concat('?'),
       store_FAQ_answer: Faker.Matz.quote(),
     };
     // all each generated FAQs to array (for db)

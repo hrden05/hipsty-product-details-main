@@ -5,12 +5,21 @@ body {
   font-weight: 300;
   font-size: 13px;
   line-height: 18px;
-  /* float: right; */
+  -webkit-font-smoothing: antialiased;
+}
+
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
 }
 
 .greyText, a:link, a:visited {
   color: #595959;
   font-size: 13px;
+  margin-top: 0;
 }
 
 /*** START Product Pre Description ***/
@@ -68,9 +77,13 @@ body {
 
 .shippingInfoValues {
   letter-spacing: 0.35px;
-  font-size: 20px;
-  font-family: "Guardian-EgypTT",serif;
-  margin-top: 6px;
+  font-size: 24px;
+  font-family: "Guardian-EgypTT", serif;
+  font-weight: 1px;
+  line-height: 32px;
+  margin-top: 0px;
+  margin-block-start: 6px;
+  -webkit-font-smoothing: antialiased;
 }
 /*** END Shipping and Returns ***/
 
@@ -83,7 +96,14 @@ body {
 }
 
 /* for FAQs */
-.selectorStyling {
+.FAQAnswer {
+  font-size: 16px;
+  line-height: 28px;
+  margin-top: 0px;
+  margin-bottom: 16px;
+}
+
+.FAQButton {
   /* align-items: center; */
   align-items: center;
   border-radius: 24px;
@@ -104,13 +124,18 @@ body {
 }
 
 /* for FAQs */
-.selectorStyling:hover {
-  background: lightgrey;
+.FAQButton:hover {
+  background: rgb(239, 239, 239);
 }
 
 /* for FAQs */
-.selectorStyling:active {
-  background: grey;
+.FAQButton:active {
+  background: rgb(220, 220, 220);
+  transform: scale(0.95) perspective(1px);
+}
+
+.FAQQuestionButton {
+  width: calc(100% + 2*18px) !important;
 }
 
 /* Avatar, name, and owner of */
@@ -146,7 +171,7 @@ body {
   vertical-align: middle;
 }
 
-button {
+.messageButton {
   background: none;
   border-color: black;
   border-radius: 24px;
@@ -164,13 +189,17 @@ button {
   z-index: 10;
  }
 
- button:hover {
+ .messageButton:hover {
    box-shadow: 0 4px 20px rgba(34, 34, 34, 0.15);
    transform: scaleX(1.015) scaleY(1.035) perspective(1px);
  }
 
+ .messageButton:active {
+  box-shadow: 0 4px 20px rgba(34, 34, 34, 0.15);
+  transform: scale(1) perspective(1px);
+}
+
 .responseTime {
-  padding-top: 20px;
   text-align: center;
 }
 /*** END Seller Data ***/

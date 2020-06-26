@@ -26,7 +26,7 @@ class SellerData extends React.Component {
         <div>
           {this.props.store.store_FAQs.length > 0
           ?
-            <div className='selectorStyling' onClick={this.onFAQClick}>
+            <div className='FAQButton' onClick={this.onFAQClick}>
               <span><b>FAQs </b></span>
               {this.state.hideFAQs
                 ?
@@ -59,7 +59,7 @@ class SellerData extends React.Component {
         </div>
         <div className='responseTime'>
           <p>
-            <button type='button' className='messageButton'>
+            <button className='messageButton'>
               Message {this.props.store.store_owner}
             </button>
           </p>
