@@ -71,7 +71,7 @@ describe('Product Main Description', () => {
   };
 
   it('Product description renders, with props passed in', () => {
-    const wrapper = shallow(<ProductDescription store={store}/>);
+    const wrapper = shallow(<ProductDescription store={store} product={store.store_products}/>);
     expect(wrapper).toMatchSnapshot();
   });
 

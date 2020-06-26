@@ -40,9 +40,15 @@ class App extends React.Component {
               <div className='productPurchase'>Product Purchase</div>
               <div className='productReviews'>Product Reviews</div>
               <div className='productDescription'>
-                <div><ProductPreDescription store={this.state.store} product={this.state.product}/></div>
-                <div><ProductDescription store={this.state.store} product={this.state.product}/></div>
-                <div><ShippingAndReturns store={this.state.store} product={this.state.product}/></div>
+                <div>
+                  <ProductPreDescription store={this.state.store} product={this.state.product} />
+                </div>
+                <div>
+                  <ProductDescription store={this.state.store} product={this.state.product} />
+                </div>
+                <div>
+                  <ShippingAndReturns store={this.state.store} product={this.state.product} />
+                </div>
                 <div><SellerData store={this.state.store} /></div>
               </div>
               <div className='storeInfo'>storeInfo</div>

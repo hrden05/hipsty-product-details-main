@@ -89,7 +89,7 @@ describe('Store FAQs', () => {
     const wrapper = mount(<FAQs FAQ={store.store_FAQs[0]}/>);
     const FAQclick = wrapper.find('b');
     FAQclick.simulate('click');
-    expect(wrapper.find('.selectorStyling')).toHaveLength(1);
+    expect(wrapper.find('.FAQButton')).toHaveLength(1);
     wrapper.unmount();
   });
 });

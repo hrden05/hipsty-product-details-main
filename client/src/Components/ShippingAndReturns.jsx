@@ -7,7 +7,6 @@ const ShippingAndReturns = (props) => {
   const freeShipping = props.product.product_free_shipping;
   const shippingCost = props.product.product_delivery_cost/100;
 
-  console.log(ProductPreDescription.freeShipping);
   return (
     <div className='shippingInfo'>
       <div className='shippingInfoItem'>
