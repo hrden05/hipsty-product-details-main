@@ -26,7 +26,7 @@ const storeSchema = new mongoose.Schema({
       product_handmade: Boolean,
       product_description: String,
       product_free_shipping_amount: Number,
-      product_delivery_cost: String,
+      product_delivery_cost: Number,
       product_free_shipping: Boolean,
       product_deliver_time: Number,
       product_return_policy: Number,

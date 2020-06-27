@@ -1,4 +1,5 @@
 import React from 'react';
+import * as SVG from './svgFiles.jsx';
 
 class FAQs extends React.Component {
   constructor(props) {
@@ -26,13 +27,21 @@ class FAQs extends React.Component {
 
   render() {
     return (
-      <div>
-        <div className='selectorStyling' onClick={this.onFAQClick}><b>{this.state.FAQ.store_FAQ_question}</b></div>
+      <div className='FAQs'>
+        <div className='FAQQuestionButton FAQButton' onClick={this.onFAQClick}>
+          <span className='FAQQuestion'><b>{this.state.FAQ.store_FAQ_question}</b></span>
+          {this.state.hideFAQ
+            ?
+              <span>{SVG.FAQsArrow}</span>
+            :
+              <span>{SVG.FAQsArrowRotate}</span>
+          }
+        </div>
         {this.state.hideFAQ
           ?
           <div></div>
           :
-          <div>{this.state.FAQ.store_FAQ_answer}</div>
+          <p className='FAQAnswer'>{this.state.FAQ.store_FAQ_answer}</p>
         }
       </div>
     );

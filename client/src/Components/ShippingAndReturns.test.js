@@ -71,7 +71,7 @@ describe('Shipping and Returns', () => {
   };
 
   it('Shipping Data Renders', () => {
-    const wrapper = shallow(<ShippingAndReturns store={store}/>);
+    const wrapper = shallow(<ShippingAndReturns store={store} product={store.store_products}/>);
     expect(wrapper.contains('Svalbard & Jan Mayen Islands')).toBe(true);
   });
 

@@ -70,7 +70,7 @@ describe('Information before the description (pre-description)', () => {
     __v: 0,
   };
 
-  const wrapper = shallow(<ProductPreDescription store={store}/>);
+  const wrapper = shallow(<ProductPreDescription store={store} product={store.store_products}/>);
 
   it('Pre-description renders, with props passed in', () => {
     expect(wrapper).toMatchSnapshot();
