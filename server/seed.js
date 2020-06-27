@@ -31,7 +31,7 @@ for (let i = 0; i < 100; i += 1) {
       product_quantity: faker.random.number({ min: 0, max: 50 }),
       product_material: faker.commerce.productAdjective(),
       product_handmade: faker.random.boolean(),
-      product_description: Faker.Hipster.paragraph(5),
+      product_description: Faker.Hipster.paragraph(50),
       product_free_shipping_amount: faker.random.number({ min: 5, max: 20 }) * 5,
       product_delivery_cost: Faker.Commerce.price({ min: 1000, max: 3000}), //this is in cents
       product_free_shipping: faker.random.boolean(),

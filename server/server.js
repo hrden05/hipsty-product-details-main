@@ -8,11 +8,14 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, '../client/dist')));
 
 app.get('/api/stores', (req, res) => {
-  db.Store.find().exec((err, results) => {
+  // for all in database: db.Store.find().exec((err, results) => {
+  db.Store.aggregate([{$sample:{size:1}}]).exec((err, results) => {
     if (err) {
       res.status(500);
     } else {
-      res.status(200).json({ stores: results });
+      console.log(results.store_products)
+      const randomProduct = Math.floor(Math.random() * results[0].store_products.length);
+      res.status(200).json({ stores: results[0], product: results[0].store_products[randomProduct]});
     }
   });
 });

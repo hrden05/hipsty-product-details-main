@@ -1,11 +1,55 @@
 body {
-  font-family: "Graphik Webfont",-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif;
+  font-family: "Graphik Webfont" ,-apple-system,BlinkMacSystemFont,"Roboto","Droid Sans","Segoe UI","Helvetica",Arial,sans-serif !important;
   font-size: 13px;
   margin: 20px;
   font-weight: 300;
   font-size: 13px;
   line-height: 18px;
-  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+button {
+  align-items: flex-start;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  outline: none;
+  border-radius: 24px;
+  display: inline-block;
+  font-weight: bold;
+  line-height: 18.2px;
+  margin: unset !important;
+  min-height: 36px;
+  min-width: 36px;
+  padding: 9px 15px;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  z-index: 10;
+}
+
+button:hover {
+ background-color: rgb(239, 239, 239);
+}
+
+button:active {
+  background-color: rgb(220, 220, 220);
+  transform: scale(.95) perspective(1px);
+}
+
+button:active:after {
+  transform: scale(1) perspective(1px);
+}
+
+.buttonDiv {
+  font-size: 14px;
+  line-height: 19.6px;
+  text-align: center;
+}
+
+div {
+  display: block;
 }
 
 p {
@@ -44,14 +88,40 @@ p {
 /*** START Product Description ***/
 .descriptionField {
   margin-top: 30px;
+  margin-bottom: 30px;
 }
 
+/* handmade icon (and others upon expansion of project) */
 .descriptionFieldExtra {
- margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
 .productDescriptionText {
+  box-sizing: border-box;
+  display: block;
   font-size: 16px;
+  line-height: 28px;
+  margin-bottom: unset;
+  max-height: 240px;
+  min-height: 240px;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  position: relative;
+  word-break: break-word;
+  white-space: pre-wrap;
+}
+
+.productDescriptionTextHide:before {
+  content:'';
+  background-image: linear-gradient(to bottom, transparent, #ffffff);
+  height:100%;
+  position: absolute;
+  opacity: 1;
+  width:100%;
+}
+
+.productDescriptionTextShow {
+  max-height: none !important;
 }
 /*** END Product Description ***/
 
@@ -90,9 +160,8 @@ p {
 /*** START Seller Data ***/
 /* Entire seller data block */
 .sellerData {
-  /* align-items: center;
-  box-sizing: border-box; */
-  /* margin-top: 15px; */
+  align-items: center;
+  box-sizing: border-box;
 }
 
 /* for FAQs */
@@ -173,19 +242,23 @@ p {
 
 .messageButton {
   background: none;
-  border-color: black;
+  border: 2px solid #222222;
+  box-sizing: border-box;
   border-radius: 24px;
+  color: black !important;
   cursor: pointer;
   display: inline-block;
   font-size: 16px;
+  font-size: 4vw;
+  font-weight: bold;
   line-height: 1.5;
   min-height: 48px;
   min-width: 48px;
-  outline: none;
   padding: 12px 18px;
   position: relative;
-  width: 100%;
+  text-decoration: none;
   vertical-align: middle;
+  width: 100% !important;
   z-index: 10;
  }
 
@@ -194,7 +267,7 @@ p {
    transform: scaleX(1.015) scaleY(1.035) perspective(1px);
  }
 
- .messageButton:active {
+ .messageButton:active{
   box-shadow: 0 4px 20px rgba(34, 34, 34, 0.15);
   transform: scale(1) perspective(1px);
 }
@@ -204,7 +277,7 @@ p {
 }
 /*** END Seller Data ***/
 
-a:hover {
+.storeOwnerLink:hover {
   opacity: 70%;
 }
 
@@ -261,7 +334,7 @@ a:hover {
 }
 
 .productReviews {
-  background: lightpink;
+  background: lightgrey;
   flex: 1 1 66%;
   opacity: 30%;
 }
@@ -272,10 +345,19 @@ a:hover {
   margin-top: -100px;
 }
 
-.storeInfo {
-  background: lightgray;
+.storeInfoRoof{
   flex: 1 1 100%;
-  opacity: 30%;
+  height: auto;
+  fill:#F8EBE6;
+  background: inherit;
+  margin: 0px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.storeInfo {
+  background: #F8EBE6;
+  flex: 1 1 100%;
   height: 300px;
 }
 
@@ -286,6 +368,41 @@ a:hover {
   height: 400px;
 }
 
+.subscribeRoof {
+  flex: 1 1 100%;
+  height: auto;
+  fill: #D7E6F5;
+  line-height: 19.6px;
+  margin: 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+.subscribe {
+  background: #D7E6F5;
+  flex: 1 1 100%;
+  height: 100px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.preFooterRoof {
+  flex: 1 1 100%;
+  height: auto;
+  fill: #2F466C;
+  background: #D7E6F5;
+  overflow: hidden;
+  width: 100%;
+}
+
+.preFooter {
+  background: #2F466C;
+  flex: 1 1 100%;
+  height: 200px;
+  text-align: center;
+  vertical-align: middle;
+}
+
 .relatedProducts {
   background: lightyellow;
   flex: 1 1 100%;
@@ -294,8 +411,16 @@ a:hover {
 }
 
 .footerBar {
-  background: lightsalmon;
+  background: #232347;
+  color: white;
   flex: 1 1 100%;
-  opacity: 30%;
   height: 100px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.testSVG {
+  flex: 1 1 100%;
+  height: auto;
+  width: 100%;
 }

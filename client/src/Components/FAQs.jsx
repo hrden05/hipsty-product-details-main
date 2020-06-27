@@ -27,7 +27,7 @@ class FAQs extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className='FAQs'>
         <div className='FAQQuestionButton FAQButton' onClick={this.onFAQClick}>
           <span className='FAQQuestion'><b>{this.state.FAQ.store_FAQ_question}</b></span>
           {this.state.hideFAQ
