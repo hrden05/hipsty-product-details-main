@@ -1,6 +1,6 @@
 # Project Name
 
-> Project description
+> Replication of the popular hand-crafting ecommerce site, Etsy!
 
 ## Related Projects
 
@@ -18,12 +18,12 @@
 
 ## Usage
 
-> 'npm install' to install all dependencies
-> 'npm run build-dev' to run webpack (watches)
-> 'npm run start-dec' to run the server (with nodemon)
-> 'npm run seed' to create 100 random stores into the database
-> 'npm run test' to see tests and coverage
-> 'npm run test-watch' to see tests, coverage, and auto-update when any testing files changed
+> `npm install` to install all dependencies
+> `npm run build-dev` to run webpack (watches)
+> `npm run start-dec` to run the server (with nodemon)
+> `npm run seed` to create 100 random stores into the database
+> `npm run test` to see tests and coverage
+> `npm run test-watch` to see tests, coverage, and auto-update when any testing files changed
 
 ## Requirements
 
