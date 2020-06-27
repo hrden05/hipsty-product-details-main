@@ -19,7 +19,7 @@ const ProductPreDescription = (props) => {
         : ''
       }
 
-      { otherShoppers > 2
+      { otherShoppers > 5
         ? <div className='SVGIconsAndText'>{SVG.groceryCartSVG} <p className='SVGText'><b>Other people want this.</b> Over {otherShoppers - 1} people have this in their carts right now.</p> </div>
         : ''
       }
