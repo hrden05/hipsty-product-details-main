@@ -60,7 +60,7 @@ class SellerData extends React.Component {
         <div className='responseTime'>
           <p>
             <a rel='#convo-overlay' href='/' className='messageButton'>
-              Message {this.props.store.store_owner}
+              Message {this.props.store.store_owner.split(' ')[0]}
             </a>
           </p>
           <p className='greyText'>This seller usually responds <b>within {this.props.store.store_response_time} hours.</b></p>
