@@ -39,7 +39,7 @@ class FAQs extends React.Component {
         </div>
         {this.state.hideFAQ
           ?
-          <div></div>
+          null
           :
           <p className='FAQAnswer'>{this.state.FAQ.store_FAQ_answer}</p>
         }

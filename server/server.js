@@ -13,11 +13,19 @@ app.get('/api/stores', (req, res) => {
     if (err) {
       res.status(500);
     } else {
-      console.log(results.store_products)
       const randomProduct = Math.floor(Math.random() * results[0].store_products.length);
       res.status(200).json({ stores: results[0], product: results[0].store_products[randomProduct]});
     }
   });
+});
+
+app.get('/api/stores/:id', async (req, res) => {
+  try {
+    var store = await db.Store.findById(req.params.id).exec();
+    res.send(store);
+  } catch (error) {
+    res.status(500).send(error);
+  }
 });
 
 // app.get('/', (req, res) => res.send("test"));

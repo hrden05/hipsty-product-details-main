@@ -12,20 +12,38 @@ const ProductPreDescription = (props) => {
       { lowQuantity < 10
         ? <div className='SVGIconsAndText'>
             {SVG.hourglassSVG}
-            <p className='SVGText'>
-              <b>Almost gone.</b> There&apos;s only {lowQuantity} left.
-            </p>
+              { lowQuantity === 1
+              ?
+              <p className='SVGText'>
+                <b>Rare find</b> — there&apos;s only {lowQuantity} of these in stock.
+              </p>
+              :
+              <p className='SVGText'>
+                <b>Almost gone.</b> There&apos;s only {lowQuantity} left.
+              </p>
+              }
           </div>
         : ''
       }
 
       { otherShoppers > 5
-        ? <div className='SVGIconsAndText'>{SVG.groceryCartSVG} <p className='SVGText'><b>Other people want this.</b> Over {otherShoppers - 1} people have this in their carts right now.</p> </div>
+        ? <div className='SVGIconsAndText'>
+            {SVG.groceryCartSVG}
+            <p className='SVGText'>
+              <b>Other people want this.</b> Over {otherShoppers - 1} people have this in their carts right now.
+            </p>
+          </div>
         : ''
       }
 
       { freeShipping
-        ? <div className='SVGIconsAndText'>{SVG.shippingTruckSVG}<p className='SVGText'><b>Horray!</b> This item ships for free to the US.</p></div>
+        ?
+        <div className='SVGIconsAndText'>
+          {SVG.shippingTruckSVG}
+          <p className='SVGText'>
+            <b>Horray!</b> This item ships for free to the US.
+          </p>
+        </div>
         : ''
       }
     </div>

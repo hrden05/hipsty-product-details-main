@@ -27,6 +27,7 @@ for (let i = 0; i < 100; i += 1) {
   const numberOfProducts = Math.floor(Math.random() * 9 + 1);
   for (let j = 0; j < numberOfProducts; j += 1) {
     const newProduct = {
+      product_id: faker.random.number({ min: 1, max: 100 }),
       product_name: faker.commerce.productName(),
       product_quantity: faker.random.number({ min: 0, max: 50 }),
       product_material: faker.commerce.productAdjective(),
@@ -45,12 +46,12 @@ for (let i = 0; i < 100; i += 1) {
 
   // for all of store data
   const storeAll = {
+    store_id: faker.random.number({ min: 1, max: 100 }),
     store_name: faker.company.companyName(),
-    store_owner: faker.name.findName(),
+    store_owner: Faker.Name.name(),
     store_owner_avatar: faker.image.avatar(),
-    store_country: faker.address.country(),
+    store_country: Faker.Address.country(),
     store_response_time: faker.random.number({ min: 0, max: 72 }),
-    store_id: faker.random.number({ min: 0, max: 10000 }),
     store_FAQs: storeFAQs,
     store_products: storeProducts,
   };
