@@ -17,5 +17,8 @@ RUN npm run seed
 # add the app
 COPY . ./
 
+# what port the container will show the outside world
+EXPOSE 3000
+
 # start the app
 CMD ["npm", "start-dev"]

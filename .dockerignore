@@ -6,3 +6,4 @@ Dockerfile.prod
 coverage
 __snapshots__
 Stuff.txt
+docker-compose.yml
