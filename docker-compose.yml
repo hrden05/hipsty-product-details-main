@@ -7,4 +7,7 @@ services:
       -'8000:8000'
 
 mongo:
-  image: mongo:
+  image: mongo:2.7
+
+redis:
+  image: redits:0.6
