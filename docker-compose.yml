@@ -1,13 +1,19 @@
-version: '2'
+version: '3'
 
 services:
-  web:
-    image: web:1.0
+  client:
+    build: .
+    depends_on:
+      - 'database'
     ports:
-      -'8000:8000'
+      - '3000:3000'
 
-mongo:
-  image: mongo:2.7
+  database:
+    image: mongo
+    # ports:
+    #   - '27017:27017'
 
-redis:
-  image: redits:0.6
+  # seed:
+  #   build: ./server/seed.js
+  #   links:
+  #     - 'database'

@@ -7,3 +7,5 @@ coverage
 __snapshots__
 Stuff.txt
 docker-compose.yml
+webpack.config.js
+STYLE-GUIDE.md
