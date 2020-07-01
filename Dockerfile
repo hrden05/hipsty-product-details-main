@@ -1,18 +1,18 @@
 # pulling in official base image
 FROM node:14.4.0-alpine
 
+# RUN mkdir -p /src/app
+
 # set working directory
-WORKDIR /hipsty-product-details-main
+WORKDIR /app
 
 # add node modules bin to $PATH
-ENV PATH /hipsty-product-details-main/node_modules/.bin:$PATH
+ENV PATH /app/node_modules/.bin:$PATH
 
 # install app dependencies
 COPY package.json ./
 COPY package-lock.json ./
 RUN npm install
-RUN npm run build-dev
-RUN npm run seed
 
 # add the app
 COPY . ./
@@ -21,4 +21,10 @@ COPY . ./
 EXPOSE 3000
 
 # start the app
-CMD ["npm", "start-dev"]
+CMD ["npm", "start"]
+
+# TO BUILD
+# docker build -t product_details .
+
+# TO RUN
+# docker run -it -d --rm -p 3000:3000 -v $(pwd):/hipsty-product-details-main -e CHOKIDAR_USEPOLLING=true --name hp product_details
