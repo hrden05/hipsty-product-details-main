@@ -1,0 +1,19 @@
+# pulling in official base image
+FROM node:14.4.0-alpine
+
+# set working directory
+WORKDIR /
+
+# install app dependencies
+COPY ./server/seed.js ./server
+COPY ./database/index.js ./database
+COPY package.json ./
+COPY package-lock.json ./
+# COPY ./server/seed.js ./seed
+RUN npm install
+
+# add the app
+COPY . ./
+
+# start the app
+CMD ["npm", "run", "seed"]

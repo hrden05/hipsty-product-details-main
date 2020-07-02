@@ -8,3 +8,5 @@ Stuff.txt
 # jest data
 coverage
 #__snapshots__
+details.pem
+AWSCLIV2.pkg
