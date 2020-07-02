@@ -41,6 +41,10 @@ From within the root directory (all needed will be installed from package.json):
 ```sh
 npm install
 ```
+#### Further Notes:
+
+- When attempting to seed the database (via mongo), once launching with Docker, run the seed command within the client container: `docker exec -it <client-container> npm run seed`.
+- Method of single concept deployment: docker setup and completetion -> docker hub (push image) -> EC2 setup, SSH login to AWS EC2 instance, install what's needed from SSH (to the instance) -> make sure the ports match up
 
 ## Current photo progress:
 

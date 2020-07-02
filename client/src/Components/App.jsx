@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import HeaderBar from './HeaderBar.jsx';
 import ProductPreDescription from './ProductPreDescription.jsx';
 import ProductDescription from './ProductDescription.jsx';
 import ShippingAndReturns from './ShippingAndReturns.jsx';

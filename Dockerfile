@@ -1,5 +1,6 @@
 # pulling in official base image
 FROM node:14.4.0-alpine
+# FROM node:14-slim
 
 # RUN mkdir -p /src/app
 
@@ -7,18 +8,28 @@ FROM node:14.4.0-alpine
 WORKDIR /app
 
 # add node modules bin to $PATH
-ENV PATH /app/node_modules/.bin:$PATH
+# ENV PATH /app/node_modules/.bin:$PATH
 
 # install app dependencies
 COPY package.json ./
 COPY package-lock.json ./
+# COPY ./server ./server
+# COPY ./database ./database
+# COPY ./client/dist ./client/dist
+# COPY ./server/seed.js ./seed
 RUN npm install
+
+# RUN npm install axios \
+#   && npm install express \
+#   && npm install faker \
+#   && npm install fakergem \
+#   && npm install mongoose
 
 # add the app
 COPY . ./
 
-# what port the container will show the outside world
-EXPOSE 3000
+# # what port the container will show the outside world
+# EXPOSE 3000
 
 # start the app
 CMD ["npm", "start"]

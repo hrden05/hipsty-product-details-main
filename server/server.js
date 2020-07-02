@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const db = require('../database/index.js');
 
-const PORT = 3000;
+const PORT = 4507;
 const app = express();
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '../client/dist')));

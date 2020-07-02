@@ -1,7 +1,6 @@
 node_modules
 .dockerignore
 Dockerfile
-Dockerfile.prod
 .vscode
 coverage
 __snapshots__
@@ -9,3 +8,12 @@ Stuff.txt
 docker-compose.yml
 webpack.config.js
 STYLE-GUIDE.md
+details.pem
+AWSCLIV2.pkg
+Dockerfile.seed
+.circleci
+public
+src
+.git*
+.eslintrc.js
+jest.setup.js
