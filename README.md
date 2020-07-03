@@ -15,6 +15,7 @@
 1. [Usage](#Usage)
 1. [Requirements](#requirements)
 1. [Development](#development)
+1. [Current progress (photo)](#current)
 
 ## Usage
 
