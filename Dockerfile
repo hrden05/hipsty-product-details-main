@@ -2,10 +2,10 @@
 FROM node:14.4.0-alpine
 # FROM node:14-slim
 
-# RUN mkdir -p /app
+RUN mkdir -p /src/app
 
 # set working directory
-WORKDIR /app
+WORKDIR /src/app
 
 # add node modules bin to $PATH
 # ENV PATH /app/node_modules/.bin:$PATH
@@ -26,7 +26,7 @@ RUN npm install
 #   && npm install mongoose
 
 # add the app
-COPY . ./
+COPY . ./src/app
 
 # # what port the container will show the outside world
 EXPOSE 4507
