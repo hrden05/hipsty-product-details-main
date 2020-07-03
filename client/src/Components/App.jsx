@@ -37,10 +37,10 @@ class App extends React.Component {
         {this.state.loading
           ? <h1>Loading...</h1>
           : (<div className='body'>
-              <div className='headerBar'>Header Section</div>
+              {/* <div className='headerBar'>Header Section</div>
               <div className='productPictures'>Product Pictures</div>
               <div className='productPurchase'>Product Purchase</div>
-              <div className='productReviews'>Product Reviews</div>
+              <div className='productReviews'>Product Reviews</div> */}
               <div className='productDescription'>
                 <div>
                   <ProductPreDescription store={this.state.store} product={this.state.product} />
@@ -53,7 +53,7 @@ class App extends React.Component {
                 </div>
                 <div><SellerData store={this.state.store} /></div>
               </div>
-              <span className='storeInfoRoof'>{storeWave}</span>
+              {/* <span className='storeInfoRoof'>{storeWave}</span>
               <div className='storeInfo'>storeInfo</div>
               <div className='adsSection'>ads</div>
               <div className='relatedProducts'>Related Products</div>
@@ -61,7 +61,7 @@ class App extends React.Component {
               <div className='subscribe'>Subscribe</div>
               <span className='preFooterRoof'>{preFooterWave}</span>
               <div className='preFooter'>Pre-footer area</div>
-              <div className='footerBar'>Footer Section</div>
+              <div className='footerBar'>Footer Section</div> */}
             </div>
           )}
       </div>
