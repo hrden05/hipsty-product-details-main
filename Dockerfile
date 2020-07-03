@@ -2,7 +2,7 @@
 FROM node:14.4.0-alpine
 # FROM node:14-slim
 
-RUN mkdir -p /src/app
+RUN mkdir -p /app
 
 # set working directory
 WORKDIR /app
