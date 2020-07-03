@@ -35,7 +35,7 @@ class App extends React.Component {
     return (
       <div>
         {this.state.loading
-          ? <h1>Loading...</h1>
+          ? <h1>Loading... (Josh)</h1>
           : (<div className='body'>
               {/* <div className='headerBar'>Header Section</div>
               <div className='productPictures'>Product Pictures</div>
