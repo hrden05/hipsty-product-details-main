@@ -19,14 +19,14 @@ app.get('/api/stores', (req, res) => {
   });
 });
 
-app.get('/api/stores/:id', async (req, res) => {
-  try {
-    var store = await db.Store.findById(req.params.id).exec();
-    res.send(store);
-  } catch (error) {
-    res.status(500).send(error);
-  }
-});
+// app.get('/api/stores/:id', async (req, res) => {
+//   try {
+//     var store = await db.Store.findById(req.params.id).exec();
+//     res.send(store);
+//   } catch (error) {
+//     res.status(500).send(error);
+//   }
+// });
 
 // app.get('/', (req, res) => res.send("test"));
 
