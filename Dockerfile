@@ -1,5 +1,5 @@
 # pulling in official base image
-FROM node:14.4.0-alpine
+FROM node:12-alpine
 # FROM node:14-slim
 
 RUN mkdir -p /src/app
@@ -26,7 +26,7 @@ RUN npm install
 #   && npm install mongoose
 
 # add the app
-COPY . ./src/app
+COPY . /src/app
 
 # # what port the container will show the outside world
 EXPOSE 4507
