@@ -8,8 +8,10 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, '../client/dist')));
 
 app.get('/api/stores', (req, res) => {
+  const { randomStore } = req.query;
   // for all in database: db.Store.find().exec((err, results) => {
-  db.Store.aggregate([{$sample:{size:1}}]).exec((err, results) => {
+  // db.Store.aggregate([{$sample:{size:1}}]).exec((err, results) => {
+  db.Store.find( {store_id: randomStore} ).exec((err, results) => {
     if (err) {
       res.status(500);
     } else {

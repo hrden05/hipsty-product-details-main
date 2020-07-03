@@ -19,7 +19,12 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('/api/stores')
+    const randomStore = Math.floor(Math.random() * 100);
+    axios.get('/api/stores', {
+      params: {
+        randomStore
+      }
+    })
       .then((res) => {
         // const randomStore = Math.floor(Math.random() * res.data.stores.length);
         this.setState({
