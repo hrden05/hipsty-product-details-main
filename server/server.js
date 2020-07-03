@@ -9,12 +9,14 @@ app.use(express.static(path.join(__dirname, '../client/dist')));
 
 app.get('/api/stores', (req, res) => {
   const { randomStore } = req.query;
+  // console.log(req.query);
   // for all in database: db.Store.find().exec((err, results) => {
   // db.Store.aggregate([{$sample:{size:1}}]).exec((err, results) => {
   db.Store.find( {store_id: randomStore} ).exec((err, results) => {
     if (err) {
       res.status(500);
     } else {
+      // console.log(results[0]);
       const randomProduct = Math.floor(Math.random() * results[0].store_products.length);
       res.status(200).json({ stores: results[0], product: results[0].store_products[randomProduct]});
     }

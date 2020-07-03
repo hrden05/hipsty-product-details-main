@@ -9,7 +9,7 @@ db.Store.deleteMany()
 
 /* ************ seed data for 100 stores ************ */
 const stores = [];
-for (let i = 0; i < 100; i += 1) {
+for (let i = 1; i <= 100; i += 1) {
   // make some store FAQs
   const storeFAQs = [];
   const numberOfFAQs = Math.floor(Math.random() * 5);
@@ -25,7 +25,7 @@ for (let i = 0; i < 100; i += 1) {
   // make a bunch of products from the store
   const storeProducts = [];
   const numberOfProducts = Math.floor(Math.random() * 9 + 1);
-  for (let j = 0; j < numberOfProducts; j += 1) {
+  for (let j = 1; j <= numberOfProducts; j += 1) {
     const newProduct = {
       product_id: faker.random.number({ min: 1, max: 100 }),
       product_name: faker.commerce.productName(),
@@ -46,7 +46,7 @@ for (let i = 0; i < 100; i += 1) {
 
   // for all of store data
   const storeAll = {
-    store_id: faker.random.number({ min: 1, max: 100 }),
+    store_id: i,
     store_name: faker.company.companyName(),
     store_owner: Faker.Name.name(),
     store_owner_avatar: faker.image.avatar(),

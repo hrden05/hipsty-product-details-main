@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 // Server Discover and Monitoring engine
-mongoose.connect('mongodb://database', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb://localhost', { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('[ [ Connected to database. ] ]'))
   .catch((err) => console.error('error connecting to database', err));
 
