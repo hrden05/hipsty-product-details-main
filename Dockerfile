@@ -2,7 +2,7 @@
 FROM node:14.4.0-alpine
 # FROM node:14-slim
 
-RUN mkdir -p /app
+# RUN mkdir -p /app
 
 # set working directory
 WORKDIR /app
@@ -29,7 +29,7 @@ RUN npm install
 COPY . ./
 
 # # what port the container will show the outside world
-# EXPOSE 3000
+EXPOSE 4507
 
 # start the app
 CMD ["npm", "start"]
