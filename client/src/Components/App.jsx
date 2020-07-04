@@ -21,14 +21,15 @@ class App extends React.Component {
 
   componentDidMount() {
     const randomStore = Math.floor(Math.random() * 100 + 1);
-    axios.get('api/stores', {
+    axios.get('api/joshstore', {
       params: {
         randomStore,
       },
     })
       .then((response) => {
         // const randomStore = Math.floor(Math.random() * res.data.stores.length);
-        console.log(`Josh: data from db within App.jsx ${response.data}`);
+        console.log(`Josh: store data from db within App.jsx ${response.data.stores}`);
+        console.log(`Josh: product data from db within App.jsx ${response.data.product}`);
         this.setState({
           store: response.data.stores,
           product: response.data.product,

@@ -9,7 +9,7 @@ app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '../client/dist')));
 
-app.get('/api/stores', (req, res) => {
+app.get('/api/joshstore', (req, res) => {
   const { randomStore } = req.query;
   // console.log(req.query);
   // for all in database: db.Store.find().exec((err, results) => {
