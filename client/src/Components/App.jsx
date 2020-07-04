@@ -28,8 +28,8 @@ class App extends React.Component {
     })
       .then((response) => {
         // const randomStore = Math.floor(Math.random() * res.data.stores.length);
-        console.log(`Josh: store data from db within App.jsx ${response.data.stores}`);
-        console.log(`Josh: product data from db within App.jsx ${response.data.product}`);
+        console.log('Josh: store data from db within App.jsx' + response.data.stores);
+        console.log('Josh: product data from db within App.jsx' + response.data.product);
         this.setState({
           store: response.data.stores,
           product: response.data.product,

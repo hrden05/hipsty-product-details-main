@@ -9,6 +9,7 @@ const ProductPreDescription = (props) => {
 
   return (
     <div>
+      <div>
       { lowQuantity < 10
         ? <div className='SVGIconsAndText'>
             {SVG.hourglassSVG}
@@ -25,7 +26,8 @@ const ProductPreDescription = (props) => {
           </div>
         : ''
       }
-
+      </div>
+      <div>
       { otherShoppers > 5
         ? <div className='SVGIconsAndText'>
             {SVG.groceryCartSVG}
@@ -35,7 +37,7 @@ const ProductPreDescription = (props) => {
           </div>
         : ''
       }
-
+      </div><div>
       { freeShipping
         ?
         <div className='SVGIconsAndText'>
@@ -46,6 +48,7 @@ const ProductPreDescription = (props) => {
         </div>
         : ''
       }
+      </div>
     </div>
   );
 };
