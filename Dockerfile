@@ -29,7 +29,7 @@ RUN npm install
 COPY . /src/app
 
 # # what port the container will show the outside world
-EXPOSE 4507
+EXPOSE 3000
 
 # start the app
 CMD ["npm", "start"]
