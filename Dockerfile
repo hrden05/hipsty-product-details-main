@@ -13,6 +13,8 @@ WORKDIR /src/app
 # install app dependencies
 COPY package.json ./
 COPY package-lock.json ./
+# add the app
+COPY . /src/app
 # COPY ./server ./server
 # COPY ./database ./database
 # COPY ./client/dist ./client/dist
@@ -25,8 +27,7 @@ RUN npm install
 #   && npm install fakergem \
 #   && npm install mongoose
 
-# add the app
-COPY . /src/app
+
 
 # # what port the container will show the outside world
 EXPOSE 3000
