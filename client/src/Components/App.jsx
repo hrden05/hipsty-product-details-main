@@ -32,6 +32,7 @@ class App extends React.Component {
           product: res.data.product,
           loading: false,
         });
+        console.log(res.data);
       })
       .catch((err) => console.log(err.message));
   }

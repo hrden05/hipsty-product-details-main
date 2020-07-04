@@ -11,7 +11,7 @@ services:
       - '80:4507'
 
   database:
-    image: mongo
+    image: mongo:latest
 
   seed:
     build: .
