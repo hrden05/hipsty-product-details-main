@@ -20,7 +20,8 @@ app.get('/api/stores', (req, res) => {
     } else {
       // console.log(results[0]);
       const randomProduct = Math.floor(Math.random() * results[0].store_products.length);
-      res.status(200).json({ stores: results[0], product: results[0].store_products[randomProduct]});
+      console.log(results[0]);
+      res.status(200).json({ stores: results[0], product: results[0].store_products[randomProduct] });
     }
   });
 });
