@@ -18,9 +18,8 @@ app.get('/api/joshstore', (req, res) => {
     if (err) {
       res.status(500);
     } else {
-      // console.log(results[0]);
+   // console.log(results[0]);
       const randomProduct = Math.floor(Math.random() * results[0].store_products.length);
-      console.log(results[0]);
       res.status(200).json({ stores: results[0], product: results[0].store_products[randomProduct] });
     }
   });
