@@ -49,7 +49,7 @@ class App extends React.Component {
         <div className='productPictures'>Product Pictures</div>
         <div className='productPurchase'>Product Purchase</div>
         <div className='productReviews'>Product Reviews</div>
-        <div className='productDescription'>
+        <div id='productDescription' className='productDescription'>
           <div>
             <ProductPreDescription store={this.state.store} product={this.state.product} />
           </div>
