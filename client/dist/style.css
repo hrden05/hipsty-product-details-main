@@ -310,7 +310,7 @@ p {
 /***************/
 /* Page layout */
 /***************/
-/* .body {
+ .body {
   display: flex;
   flex-wrap: wrap;
 }
@@ -318,6 +318,7 @@ p {
 .etsyLogo {
   size: 100px;
 }
+
 .headerBar {
   background-color: lightgoldenrodyellow;
   flex: 1 1 100%;
@@ -351,7 +352,7 @@ p {
   margin-top: -100px;
 } */
 
-/* .storeInfoRoof{
+.storeInfoRoof{
   flex: 1 1 100%;
   height: auto;
   fill:#F8EBE6;
@@ -423,4 +424,4 @@ p {
   height: 100px;
   text-align: center;
   vertical-align: middle;
-} */
+} 
