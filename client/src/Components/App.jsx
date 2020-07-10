@@ -15,7 +15,6 @@ class App extends React.Component {
       store: [],
       product: [],
       loading: true,
-      error: null,
     };
   }
 
@@ -28,8 +27,6 @@ class App extends React.Component {
     })
       .then((response) => {
         // const randomStore = Math.floor(Math.random() * res.data.stores.length);
-        console.log('Josh: store data from db within App.jsx' + response.data.stores);
-        console.log('Josh: product data from db within App.jsx' + response.data.product);
         this.setState({
           store: response.data.stores,
           product: response.data.product,
@@ -39,19 +36,12 @@ class App extends React.Component {
       })
       .catch((err) => {
         console.log(err.message)
-        this.setSate({
-          loading: true,
-          error,
-        });
     });
   };
 
   render() {
-    if (this.state.error){
-      return <h1>Error (Josh)</h1>
-    }
     if (this.state.loading) {
-      return <h1>Loading... (Josh)</h1>
+      return <h1>Loading... </h1>
     }
     return (
       <div className='body'>
