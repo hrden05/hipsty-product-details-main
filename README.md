@@ -1,4 +1,6 @@
-# Project Name ![](https://i.ibb.co/cCZc12x/Screen-Shot-2020-08-01-at-1-56-07-PM.png)
+![Hipsy](https://i.ibb.co/cCZc12x/Screen-Shot-2020-08-01-at-1-56-07-PM.png)
+
+# Project Name
 
 > Replication of the popular hand-crafting ecommerce site, Etsy!
 
