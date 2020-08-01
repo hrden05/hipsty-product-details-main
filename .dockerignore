@@ -17,3 +17,4 @@ src
 .git*
 .eslintrc.js
 jest.setup.js
+FEC-proxy.pem
