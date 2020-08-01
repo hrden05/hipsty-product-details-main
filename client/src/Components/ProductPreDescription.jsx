@@ -43,7 +43,7 @@ const ProductPreDescription = (props) => {
         <div className='SVGIconsAndText'>
           {SVG.shippingTruckSVG}
           <p className='SVGText'>
-            <b>Horray!</b> This item ships for free to the US.
+            <b>Hooray!</b> This item ships for free to the US.
           </p>
         </div>
         : ''
